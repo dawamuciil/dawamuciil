@@ -1,6 +1,10 @@
 ### Hi there 👋
 
 ![GitHub followers](https://img.shields.io/github/followers/dawamuciil?style=social)![GitHub watchers](https://img.shields.io/github/watchers/dawamuciil/dawamuciil?style=social)![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fslowajawam)
+
+
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=dawamuciil)](https://github.com/anuraghazra/github-readme-stats)
 <!--
 **dawamuciil/dawamuciil** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
