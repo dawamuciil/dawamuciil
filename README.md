@@ -1,7 +1,5 @@
 ### Hi there 👋
 
-[![Visits Badge](https://badges.pufler.dev/visits/dawamuciil/)](https://github.com/dawamuciil)
-
 ![GitHub followers](https://img.shields.io/github/followers/dawamuciil?style=social)![GitHub watchers](https://img.shields.io/github/watchers/dawamuciil/dawamuciil?style=social)![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fslowajawam)
 <!--
 **dawamuciil/dawamuciil** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
