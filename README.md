@@ -7,7 +7,7 @@
 
 <p align="left"> <a href="https://twitter.com/slowajawam" target="blank"><img src="https://img.shields.io/twitter/follow/slowajawam?logo=twitter&style=for-the-badge" alt="slowajawam" /></a> </p>
 
-- 🔭 I’m currently learning on **dicodingacademy**
+- 🔭 I’m currently learning on **@dicodingacademy**
 
 - 🌱 I’m currently learning **Flutter Frameworks**
 
@@ -21,7 +21,6 @@
 <a href="https://linkedin.com/in/dawamuciil" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="dawamuciil" height="30" width="40" /></a>
 <a href="https://fb.com/dava.ggbet.7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="dava.ggbet.7" height="30" width="40" /></a>
 <a href="https://instagram.com/eldawammm" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="eldawammm" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/https://www.youtube.com/channel/ucuk8a02i1n1tttzvnivk08a" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://www.youtube.com/channel/ucuk8a02i1n1tttzvnivk08a" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
