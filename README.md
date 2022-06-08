@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-[![Visits Badge](https://badges.pufler.dev/visits/dawamuciil/)](https://github.com/dawamuciil/dawamuciil)
+[![Visits Badge](https://badges.pufler.dev/visits/dawamuciil/)](https://github.com/dawamuciil)
 <!--
 **dawamuciil/dawamuciil** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
