@@ -7,7 +7,7 @@
 
 <p align="left"> <a href="https://twitter.com/slowajawam" target="blank"><img src="https://img.shields.io/twitter/follow/slowajawam?logo=twitter&style=for-the-badge" alt="slowajawam" /></a> </p>
 
-- 🔭 I’m currently learning on @dicodingacademy
+- 🔭 I’m currently learning on **dicodingacademy**
 
 - 🌱 I’m currently learning **Flutter Frameworks**
 
