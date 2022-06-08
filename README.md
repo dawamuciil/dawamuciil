@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id=$(dawamuciil)&left_color=green&right_color=red)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id=$(dawamuciil).%(https://github.com/dawamuciil)&left_color=green&right_color=red)
 <!--
 **dawamuciil/dawamuciil** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
