@@ -1,4 +1,5 @@
 <h1 align="center">Hi 👋, I'm Muhammad Dawamul Mughni</h1>
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Poppins&size=30&lines=Welcome+To+My+Github)](https://git.io/typing-svg)
 <h3 align="center">A passionate Mobile developer from Indonesia</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=dawamuciil&label=Profile%20views&color=0e75b6&style=flat" alt="dawamuciil" /> </p>
