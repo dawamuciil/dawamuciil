@@ -73,7 +73,16 @@ body {
     font-weight: 400;
     color: var(--white-1);
     line-height: var(--line-height-normal);
-    background: var(--black);
+    
+    background-color: #070707;
+    background-image: 
+        radial-gradient(circle at 15% 30%, rgba(255, 50, 88, 0.08), transparent 35%),
+        radial-gradient(circle at 85% 70%, rgba(255, 50, 88, 0.08), transparent 35%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100vw 100vh, 100vw 100vh, 50px 50px, 50px 50px;
+    background-attachment: fixed;
+    
     overflow-x: hidden;
 }
 
