@@ -42,7 +42,7 @@
 
     --container-max-width: 1180px;
     --container-normal-width: 800px;
-    --container-medium-width: 700px; 
+    --container-medium-width: 700px;
     --container-small-width: 500px;
 
     --gutter-huge: 12rem;
@@ -55,7 +55,8 @@
 }
 
 html {
-    font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
+    font-size: 62.5%;
+    /* (16/10)*100 = 62.5% => 1rem = 10px */
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -178,7 +179,7 @@ p {
 }
 
 @media(max-width: 900px) {
-    p { 
+    p {
         max-width: var(--container-small-width);
     }
 }
@@ -219,7 +220,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--pink);
+    border: 1px solid var(--pink);
     font-weight: 400;
 }
 
@@ -336,9 +337,32 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav--scrolled {
+    background: rgba(15, 15, 15, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav__inner {
     display: flex;
     justify-content: flex-end;
-    padding: var(--gutter-normal) 0;
+    padding: 2.5rem 0;
+    transition: padding 0.4s ease;
+}
+
+.nav--scrolled .nav__inner {
+    padding: 1.5rem 0;
 }
 
 .nav__items {
@@ -404,7 +428,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)),
         url('./images/header.jpg');
     height: 100vh;
     background-size: cover;
@@ -556,7 +580,7 @@ body:not(.user-is-tabbing) a:focus {
     .about__text {
         flex: 0 0 35%;
     }
-    
+
     .about__photo-container {
         flex: 1;
         margin: 0 var(--gutter-huge) 0 0;
@@ -609,83 +633,78 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 500px) {
     .footer {
         padding: var(--gutter-medium) 0;
-    } 
+    }
 }
 
 /* slider */
 
-@media(max-width:600px){
+@media(max-width:600px) {
 
-.nav__items{
-    flex-wrap: wrap;
-    justify-content: center;
+    .nav__items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav__item {
+        margin: 5px 10px;
+    }
+
+    .nav__inner {
+        padding: 1.5rem 0;
+        justify-content: center;
+    }
+
+    .nav--scrolled .nav__inner {
+        padding: 1rem 0;
+    }
+
 }
 
-.nav__item{
-    margin: 5px 10px;
-}
-
-}
-
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+.slider {
+    position: relative;
     width: 100%;
-    background: rgba(0,0,0,0.9);
-    z-index: 1000;
-    padding: 1.5rem 0;
 }
 
-.header {
-    padding-top: 80px;
+.slider .work__image {
+    display: none;
+    width: 100%;
 }
 
-.slider{
-  position: relative;
-  width: 100%;
+.slider .work__image.active {
+    display: block;
 }
 
-.slider .work__image{
-  display: none;
-  width: 100%;
-}
-
-.slider .work__image.active{
-  display: block;
-}
-
-.slider-buttons{
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-}
-
-.slider-buttons button{
-  background: rgba(0,0,0,0.6);
-  border: none;
-  color: white;
-  font-size: 20px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-.slider-buttons button:hover{
-  background: var(--pink);
+.slider-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
 }
 
 .slider-buttons button {
-  background: rgba(0,0,0,0.6);
-  border: none;
-  color: white;
-  font-size: 20px;
-  padding: 8px 12px;
-  cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
 }
 
 .slider-buttons button:hover {
-  background: var(--pink);
+    background: var(--pink);
+}
+
+.slider-buttons button {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.slider-buttons button:hover {
+    background: var(--pink);
 }
