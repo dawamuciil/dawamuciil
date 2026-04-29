@@ -413,10 +413,23 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-normal);
 }
 
+.header__text-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 80px);
+    position: relative;
+    z-index: 10;
+}
+
 .header__text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    flex: 1;
+}
+
+.header__3d {
+    flex: 1;
+    height: 500px;
+    width: 100%;
 }
 
 .header__text p {
@@ -424,6 +437,19 @@ body:not(.user-is-tabbing) a:focus {
     max-width: var(--container-medium-width);
     font-family: 'Jost', sans-serif;
     font-size: var(--font-size-medium);
+}
+
+@media(max-width: 900px) {
+    .header__text-box {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 5vh;
+    }
+    .header__3d {
+        height: 350px;
+        margin-top: 2rem;
+    }
 }
 
 @media(max-width: 500px) {
