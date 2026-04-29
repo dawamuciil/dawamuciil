@@ -67,11 +67,3 @@ function prevSlide(btn) {
   activeIndex = (activeIndex - 1 + slides.length) % slides.length;
   slides[activeIndex].classList.add("active");
 }
-
-/* Initialize 3D Tilt Effect */
-VanillaTilt.init(document.querySelectorAll(".work__image-box, .about__photo-container"), {
-    max: 15,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.2
-});
