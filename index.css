@@ -413,23 +413,10 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-normal);
 }
 
-.header__text-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: calc(100vh - 80px);
-    position: relative;
-    z-index: 10;
-}
-
 .header__text {
-    flex: 1;
-}
-
-.header__3d {
-    flex: 1;
-    height: 500px;
-    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .header__text p {
@@ -437,19 +424,6 @@ body:not(.user-is-tabbing) a:focus {
     max-width: var(--container-medium-width);
     font-family: 'Jost', sans-serif;
     font-size: var(--font-size-medium);
-}
-
-@media(max-width: 900px) {
-    .header__text-box {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding-top: 5vh;
-    }
-    .header__3d {
-        height: 350px;
-        margin-top: 2rem;
-    }
 }
 
 @media(max-width: 500px) {
@@ -516,6 +490,12 @@ body:not(.user-is-tabbing) a:focus {
 
 .work__image-box {
     margin-bottom: var(--gutter-normal);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.work__image {
+    transform: translateZ(30px);
 }
 
 @media(min-width: 901px) {
@@ -576,6 +556,13 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__photo-container {
     margin-bottom: var(--gutter-normal);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.about__photo {
+    transform: translateZ(40px);
+    border-radius: 10px; /* Optional: looks better with glare */
 }
 
 @media(min-width: 901px) {
