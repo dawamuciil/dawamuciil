@@ -73,16 +73,16 @@ body {
     font-weight: 400;
     color: var(--white-1);
     line-height: var(--line-height-normal);
-    
+
     background-color: #070707;
-    background-image: 
+    background-image:
         radial-gradient(circle at 15% 30%, rgba(255, 50, 88, 0.08), transparent 35%),
         radial-gradient(circle at 85% 70%, rgba(255, 50, 88, 0.08), transparent 35%),
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 100vw 100vh, 100vw 100vh, 50px 50px, 50px 50px;
     background-attachment: fixed;
-    
+
     overflow-x: hidden;
 }
 
@@ -118,6 +118,8 @@ body {
 section {
     padding: var(--gutter-huge) 0;
     border-bottom: var(--border-light);
+    position: relative;
+    overflow: hidden;
 }
 
 img {
@@ -473,15 +475,41 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Work ----- */
 /* --------------------------------------- */
 
+/* Section background glow */
+.work::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 50, 88, 0.07), transparent 70%);
+    pointer-events: none;
+}
+
 .work__box {
     display: flex;
     align-items: center;
+    position: relative;
+    padding: 4rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.work__box:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 50, 88, 0.04);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 50, 88, 0.15);
 }
 
 @media(max-width: 900px) {
     .work__box {
         align-items: initial;
         flex-direction: column-reverse;
+        padding: 2.5rem;
     }
 }
 
@@ -505,7 +533,6 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__list {
-    /* list-style-type: square; */
     list-style-position: inside;
     margin-bottom: var(--gutter-normal);
 }
@@ -523,6 +550,16 @@ body:not(.user-is-tabbing) a:focus {
 
 .work__image-box {
     margin-bottom: var(--gutter-normal);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.work__image-box img {
+    transition: transform 0.5s ease;
+}
+
+.work__box:hover .work__image-box img {
+    transform: scale(1.03);
 }
 
 @media(min-width: 901px) {
@@ -542,15 +579,42 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Clients ----- */
 /* --------------------------------------- */
 
+.client {
+    background: linear-gradient(135deg,
+            rgba(255, 50, 88, 0.04) 0%,
+            transparent 50%,
+            rgba(255, 50, 88, 0.04) 100%);
+}
+
+.client::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(-45deg,
+            transparent,
+            transparent 20px,
+            rgba(255, 255, 255, 0.012) 20px,
+            rgba(255, 255, 255, 0.012) 21px);
+    pointer-events: none;
+}
+
 .client__logos {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     filter: invert(100%) grayscale(100%) opacity(.8);
+    gap: 3rem;
 }
 
 .client__logo {
     height: 6.5rem;
     max-width: 18rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.client__logo:hover {
+    filter: invert(100%) grayscale(0%) opacity(1);
+    transform: scale(1.08);
 }
 
 @media(max-width: 1240px) {
@@ -568,10 +632,24 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- About ----- */
 /* --------------------------------------- */
 
+.about::before {
+    content: '';
+    position: absolute;
+    left: -5%;
+    top: 20%;
+    width: 45rem;
+    height: 45rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 50, 88, 0.09), transparent 70%);
+    pointer-events: none;
+}
+
 .about__content {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 @media(max-width: 900px) {
@@ -583,6 +661,32 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__photo-container {
     margin-bottom: var(--gutter-normal);
+    position: relative;
+}
+
+.about__photo-container::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, rgba(255, 50, 88, 0.6), transparent 60%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.about__photo-container:hover::before {
+    opacity: 1;
+}
+
+.about__photo {
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.4s ease;
+}
+
+.about__photo-container:hover .about__photo {
+    transform: scale(1.02);
 }
 
 @media(min-width: 901px) {
@@ -600,8 +704,31 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Contact ----- */
 /* --------------------------------------- */
 
+.contact {
+    background: radial-gradient(ellipse at center, rgba(255, 50, 88, 0.06) 0%, transparent 65%);
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 50, 88, 0.4), transparent);
+    pointer-events: none;
+}
+
 .contact__info {
     max-width: var(--container-medium-width);
+    position: relative;
+    z-index: 1;
+}
+
+.contact .btn {
+    margin-top: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
 }
 
 /* --------------------------------------- */
@@ -611,6 +738,8 @@ body:not(.user-is-tabbing) a:focus {
 .footer {
     text-align: center;
     padding: var(--gutter-medium) 0 var(--gutter-normal);
+    background: rgba(255, 255, 255, 0.01);
+    border-top: 1px solid rgba(255, 50, 88, 0.12);
 }
 
 .footer__social-links {
@@ -618,6 +747,7 @@ body:not(.user-is-tabbing) a:focus {
     justify-content: center;
     padding: var(--gutter-normal) 0;
     list-style: none;
+    gap: 1.5rem;
 }
 
 .footer__social-link-item:not(:last-of-type) {
@@ -626,6 +756,13 @@ body:not(.user-is-tabbing) a:focus {
 
 .footer__social-image {
     height: 4rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: opacity(0.7);
+}
+
+.footer__social-image:hover {
+    transform: translateY(-4px) scale(1.15);
+    filter: opacity(1) drop-shadow(0 0 8px rgba(255, 50, 88, 0.5));
 }
 
 .footer__github-buttons {
